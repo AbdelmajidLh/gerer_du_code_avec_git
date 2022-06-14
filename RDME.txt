@@ -1,0 +1,67 @@
+# Introduction
+Ce dossier à pour but de vous montrer comment gerer votre code avec l'outil `Git` (système de gestion de versions).
+Le contenu de ce dossier est issu de la formation "Gérer du code avec Git et GitHub" sur Openclassrooms <https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github>.
+
+# Initialisez Git
+Pour travailler sur Git, vous devez créer un dépôt local, c'est-à-dire un dossier dans lequel toutes vos modifications seront enregistrées. C’est ce qu’on appelle **initialiser un dépôt Git**.
+
+La première chose à faire est de configurer votre identité. Pour cela, vous allez entrer dans le monde des lignes de commande !
+
+`$ git config --global user.name "John Doe"
+ $ git config --global user.email johndoe@example.com`
+
+
+Pour vérifier que les paramètres ont bien été pris en compte, et vérifier les autres paramètres, il suffit de passer la commande  `git config --list`.
+
+## Configurez les couleurs
+Il est recommandé d’activer les couleurs afin d’améliorer la lisibilité des différentes branches. Pour cela, passez ces trois lignes dans Git Bash :
+
+`$ git config --global color.diff auto 
+ $ git config --global color.status auto 
+ $ git config --global color.branch auto`
+
+## Connfigurez l’éditeur
+Par défaut, Git utilise `Vim` comme éditeur et `Vimdiff` comme outil de merge. Vous pouvez les modifier en utilisant :
+`$ git config --global core.editor notepad++ 
+ $ git config --global merge.tool vimdiff`
+
+# Céez votre dépôt local
+Les deux méthodes pour créez un dépôt local : un dossier vide ou clonage d'un dossier git existant sur le cloud (github).
+
+Aller dans le dossier crée : `cd ../dossier` ensuite initialliser votre git : `git init`
+
+Ajouter les fichiers `index.html` et `styles.css` au dossier.
+
+Indexer les fichiers avec la commande `git add`
+
+`$ git add index.html styles.css`
+
+Créez une nouvelle version avec la commande `git commit`
+`$ git commit -m “Ajout des fichiers html et css de base”`
+
+### Envoyez votre commit sur le dépôt distant avec la commande `git push`
+Créer une version de votre projet, c’est super, mais il faut désormais passer votre commit du repository à votre dépôt distant. On dit qu’il faut “pusher” votre commit.
+
+Votre premier push va vous demander un peu de configuration.
+
+Pour commencer, vous allez devoir “reliez” votre dépôt local au dépôt distant que vous avez créé sur GitHub précédemment. Pour cela :
+
+- Allez sur GitHub.
+
+- Cliquez sur la petite image en haut à droite. 
+
+- Cliquez sur “your repositories”.
+
+- Cliquez sur le repository créé recement
+
+
+Copier le lien du dossier github et executer la commande suivante:
+`$ git remote add origin https://github.com/AbdelmajidLh/gerer_du_code_avec_git.git `
+
+Ensuite, tapez la commande :
+`git branch -M main`
+
+
+Ça y est ! Vous avez relié le dépôt local au dépôt distant. Vous pouvez donc envoyer des commits du repository vers le dépôt distant GitHub en utilisant la commande suivante :
+
+`git push -u origin main`
