@@ -65,3 +65,23 @@ Ensuite, tapez la commande :
 Ça y est ! Vous avez relié le dépôt local au dépôt distant. Vous pouvez donc envoyer des commits du repository vers le dépôt distant GitHub en utilisant la commande suivante :
 
 `git push -u origin main`
+
+ si un souci :
+`touch README
+git add README
+
+git add *
+git commit -m 'reinitialized files'
+git push origin master --force  # <- caution, --force can delete others work.`
+
+
+Bravo, la version du projet est maintenant stockée dans le cloud !
+
+## Créer une version du projet
+Par exemple si on ajoute/ modifie un fichier (version +1) il faut l'envoyer sur le repositoriy.
+
+(je vais par exemple modifier le fichier index : ajouter une paragraphe dans body)
+
+`git add index.html`
+`git commit -m “Ajout d'un paragraphe dans Body”`
+`git push origin main`
