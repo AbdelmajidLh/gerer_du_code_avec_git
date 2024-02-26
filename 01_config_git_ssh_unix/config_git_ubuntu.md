@@ -1,5 +1,3 @@
-Voici le markdown git avec le titre ajouté :
-
 ```markdown
 # Configuration des clés SSH pour GitHub
 
@@ -46,6 +44,3 @@ ssh-add ~/.ssh/id_ed25519
 ```bash
 ssh -T git@github.com
 ```
-```
-
-Cela inclut maintenant le titre "Configuration des clés SSH pour GitHub" pour mieux décrire l'ensemble du processus.
